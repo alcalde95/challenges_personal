@@ -63,17 +63,19 @@ const Body = () => {
         <div className={styles.bodyContainer}>
             <div id={styles.cuerpo}>
                 <Display value={expression} />
-                <div id={styles.btnsContainer}>
+                <div id={styles.btnsContainer1}>
                     <Button value='7' action={() => appendValue('7')} />
                     <Button value='8' action={() => appendValue('8')} />
                     <Button value='9' action={() => appendValue('9')} />
                     <Button value='(' action={() => appendValue('(')} />  
                     <Button value=')' action={() => appendValue(')')} />  
-                    <Button value='+' action={() => appendValue('+')} />
                     <Button value='4' action={() => appendValue('4')} />
                     <Button value='5' action={() => appendValue('5')} />
                     <Button value='6' action={() => appendValue('6')} />
+                    <Button value='+' action={() => appendValue('+')} />
                     <Button value='-' action={() => appendValue('-')} />
+                </div>
+                <div id={styles.btnsContainer2}>
                     <Button value='1' action={() => appendValue('1')} />
                     <Button value='2' action={() => appendValue('2')} />
                     <Button value='3' action={() => appendValue('3')} />
