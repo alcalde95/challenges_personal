@@ -68,7 +68,7 @@ const Body = () => {
             <div id={styles.cuerpo}>
                 <Display value={expression} />
                 <div id={styles.btnsContainer}>
-                <input type="text" value={answer} onKeyUp={handleAnswerChange}/>
+                
                     <Button value='7' action={() => appendValue('7')} />
                     <Button value='8' action={() => appendValue('8')} />
                     <Button value='9' action={() => appendValue('9')} />
