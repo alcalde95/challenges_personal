@@ -67,9 +67,9 @@ const Body = () => {
                     <Button value='3' action={() => appendValue('3')} />
                     <Button value='*' action={() => appendValue('*')} />
                     <Button value='0' action={() => appendValue('0')} />
-                    //Se ha añadido un nuevo boton para reseatear 
+                        
                     <Button value='RESET' action={() => reset()} />
-                    <Button value='CALC' action={() => calc()} />
+                    <Button value='=' action={() => calc()} />
                     <Button value='/' action={() => appendValue('/')} />
                 </div>
             </div>
