@@ -23,21 +23,11 @@ const Body = () => {
         Función que se pasa a un boton, al ser pulsado este añade su valor
         asociado a la expresión.
     */
-    const appendValue = (item) => {
-        if(calcDone == 1){
-            setExpression('0')
-            setcalcDone(0)
-            trueappendValue(item)
-        
-        }else{
-        trueappendValue(item)
+        const appendValue = (item) => {
+            (expression.includes('=') || expression.includes('Error')) ? setExpression(item) : (
+                expression === '0' ? setExpression(item) : setExpression(expression.concat(item))
+            )
         }
-    }
-
-
-    const trueappendValue = (item) => {
-        expression === '0' ? setExpression(item) : setExpression(expression.concat(item))
-    }
 
 
     /*
