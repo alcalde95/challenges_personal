@@ -4,7 +4,7 @@ import Display from '../Display'
 import styles from './styles.module.css'
 
 const Body = () => {
-    let calcValue = false;
+    let calcValue = 0;
     /*
         Un useState se usa para definir una variable y una función que van logadas
         Estan hechas para que la variable sea un valor o un calculo parcial
@@ -26,9 +26,9 @@ const Body = () => {
         asociado a la expresión.
     */
     const appendValue = (item) => {
-        if(calcValue == true){
+        if(calcValue == 1){
             setExpression('0')
-            calcValue = false;
+            calcValue = 0;
         }
         expression === '0' ? setExpression(item) : setExpression(expression.concat(item))
     }
@@ -40,7 +40,7 @@ const Body = () => {
     */
     const calc = () => {
         try {
-            calcValue = true;
+            calcValue = 1;
             let resultado = eval(expression)
             setExpression(`${expression}=${resultado}`)
         } catch (error) {
