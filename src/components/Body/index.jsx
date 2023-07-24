@@ -27,9 +27,18 @@ const Body = () => {
         if(calcDone == 1){
             setExpression('0')
             setcalcDone(0)
+            trueappendValue(item)
+        
+        }else{
+        trueappendValue(item)
         }
+    }
+
+
+    const trueappendValue = (item) => {
         expression === '0' ? setExpression(item) : setExpression(expression.concat(item))
     }
+
 
     /*
         Función que se pasa a un boton, al ser pulsado este realiza el calculo de
