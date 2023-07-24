@@ -68,7 +68,7 @@ const Body = () => {
                     <Button value='8' action={() => appendValue('8')} />
                     <Button value='9' action={() => appendValue('9')} />
                     <BUTTON value='(' action={() => appendValue('(')} />
-                    <BUTTON value=')' action={() => appendValue('(')} />
+                    <BUTTON value=')' action={() => appendValue(')')} />
                     <Button value='4' action={() => appendValue('4')} />
                     <Button value='5' action={() => appendValue('5')} />
                     <Button value='6' action={() => appendValue('6')} />
