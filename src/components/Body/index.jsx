@@ -66,6 +66,7 @@ const Body = () => {
     return (
         <div className={styles.bodyContainer}>
             <div id={styles.cuerpo}>
+            <input type="text" value={answer} onKeyUp={handleAnswerChange}/>
                 <Display value={expression} />
                 <div id={styles.btnsContainer}>
                 
