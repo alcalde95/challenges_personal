@@ -61,7 +61,6 @@ const Body = () => {
     */
     return (
         <div className={styles.bodyContainer}>
-            <input name= "xxs2"> </input>
             <div id={styles.cuerpo}>
                 <Display value={expression} />
                 <div id={styles.btnsContainer}>
