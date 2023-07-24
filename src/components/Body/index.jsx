@@ -13,10 +13,8 @@ const Body = () => {
         Para más información ver https://react.dev/reference/react/useState
     */
     const [expression, setExpression] = useState('0')
-
-    /*
-        Función que se pasa a un boton, resetea la expresión poniendola a 0.
-    */
+    const [calcDone, setcalcDone] = useState(0);
+    
     const reset = () => {
         setExpression('0')
     }
@@ -26,8 +24,9 @@ const Body = () => {
         asociado a la expresión.
     */
     const appendValue = (item) => {
-        if(expression.includes("=")){
+        if(calcDone == 1){
             setExpression('0')
+            setcalcDone(0)
         }
         expression === '0' ? setExpression(item) : setExpression(expression.concat(item))
     }
@@ -39,7 +38,7 @@ const Body = () => {
     */
     const calc = () => {
         try {
-
+            setcalcDone(1)
             let resultado = eval(expression)
             setExpression(`${expression}=${resultado}`)
         } catch (error) {
