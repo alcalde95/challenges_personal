@@ -24,24 +24,22 @@
     de la función de reseteo.
 */
 
-#btnsContainer1 {
-    margin-top: 1rem;
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr; 
-    grid-template-rows: 1fr 1fr;
-    gap: 1rem 1rem;
-    grid-template-areas:
-        ". . . . ."
-        ". . . . ."
-}
-
-#btnsContainer2 {
+#btnsContainer {
     margin-top: 1rem;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 2fr; 
-    grid-template-rows: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
     gap: 1rem 1rem;
     grid-template-areas:
         ". . . ."
         ". . . ."
+        ". . . ."
+        ". . . .";
+}
+
+#row {
+    grid-template-columns: 1fr 1fr; 
+    grid-template-areas:
+        ". ."
+    
 }
