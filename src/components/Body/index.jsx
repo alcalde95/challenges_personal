@@ -33,14 +33,6 @@ const Body = () => {
     }
 
 
-    const handleAnswerChange = (event) => {
-        if(event.key == '='){
-            calc()
-        }else{
-            appendValue(event.key)
-        }
-    }
-
 
     /*
         Función que se pasa a un boton, al ser pulsado este realiza el calculo de
@@ -54,6 +46,7 @@ const Body = () => {
             setExpression(`${expression}=${resultado}`)
         } catch (error) {
             reset()
+            setExpression("Error: Operación inválida")
             console.error("Error: Operación inválida")
         }
     }
