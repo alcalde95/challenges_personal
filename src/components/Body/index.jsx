@@ -33,8 +33,12 @@ const Body = () => {
     }
 
 
-    const trueappendValue = (item) => {
-        expression === '0' ? setExpression(item) : setExpression(expression.concat(item))
+    const handleAnswerChange = (event) => {
+        if(event.key == '='){
+            calc()
+        }else{
+            appendValue(event.key)
+        }
     }
 
 
@@ -64,6 +68,7 @@ const Body = () => {
             <div id={styles.cuerpo}>
                 <Display value={expression} />
                 <div id={styles.btnsContainer}>
+                <input type="text" value={answer} onKeyUp={handleAnswerChange}/>
                     <Button value='7' action={() => appendValue('7')} />
                     <Button value='8' action={() => appendValue('8')} />
                     <Button value='9' action={() => appendValue('9')} />
