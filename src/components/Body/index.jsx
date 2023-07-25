@@ -25,7 +25,7 @@ const Body = () => {
     const detectKeyDown = (e) =>{
         if(e.key === "="){
             calc();
-        }else appendValue(e.key)
+        }else{ appendValue(e.key)}
     }
     const reset = () => {
         setExpression('0')
