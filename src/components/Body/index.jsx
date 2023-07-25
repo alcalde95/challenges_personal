@@ -20,7 +20,7 @@ const Body = () => {
 
         document.addEventListener('keydown', detectKeyDown,true)
 
-    },[])
+    },[detectKeyDown])
 
     const detectKeyDown = (e) =>{
         if(e.key === "="){
@@ -58,8 +58,8 @@ const Body = () => {
             setExpression(`${expression}=${resultado}`)
         } catch (error) {
             reset()
-            setExpression("Error: Operación inválida")
-            console.error("Error: Operación inválida")
+            setExpression("Error: Operacion invalida")
+            console.error("Error: Operacion invalida")
         }
     }
 
