@@ -23,7 +23,7 @@ const Body = () => {
     })
 
     const detectKeyDown = (e) =>{
-        if(e.key === "="){
+        if(e.key === "=" || e.key === "Enter"){
             calc();
         }else{ appendValue(e.key)}
     }
