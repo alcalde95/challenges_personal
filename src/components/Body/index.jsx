@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import { useEffect } from 'react'
 import Button from '../Button'
 import Display from '../Display'
 import styles from './styles.module.css'
@@ -15,6 +16,17 @@ const Body = () => {
     const [expression, setExpression] = useState('0')
     const [calcDone, setcalcDone] = useState(0);
     
+    useEffect(() =>{
+
+        document.addEventListener('keydown', detectKeyDown,true)
+
+    },[])
+
+    const detectKeyDown = (e) =>{
+        if(e.key === "="){
+            calc();
+        }else appendValue(e.key)
+    }
     const reset = () => {
         setExpression('0')
     }
