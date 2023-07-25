@@ -20,7 +20,7 @@ const Body = () => {
 
         document.addEventListener('keydown', detectKeyDown,true)
 
-    },[detectKeyDown])
+    },[])
 
     const detectKeyDown = (e) =>{
         if(e.key === "="){
