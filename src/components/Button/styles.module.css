@@ -1,8 +1,8 @@
 .btns {
-    background-color: rgb(0, 0, 0);
+    background-color: gainsboro;
     border-radius: 1rem;
     padding: 1rem;
-    box-shadow: 3px 3px gray;
+    box-shadow: 3px 3px rgb(0, 0, 0);
     font-family: Arial, Helvetica, sans-serif;
 }
 
